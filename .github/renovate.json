@@ -1,18 +1,13 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": [
-        "github>paketo-buildpacks/github-config//renovate/renovate-default"
-    ],
-    "github-actions": {
-        "enabled": false
-    },
-    "packageRules": [
-        {
-            "matchManagers": [
-                "gomod"
-            ],
-            "groupName": "go-modules",
-            "groupTitle": "Bump the {{groupName}} with {{updates.length}} updates"
-        }
-    ]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>paketo-buildpacks/github-config//renovate/renovate-default"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["github-actions"],
+      "enabled": false,
+      "description": "Disable all updates for GitHub Actions workflows"
+    }
+  ]
 }
